@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberShield — Cybersecurity Incident Response Expert System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Mobile Overlay ──────────────────────────────────────────────────── -->
+  <div id="sidebar-overlay"></div>
+
+  <!-- ── Hamburger ───────────────────────────────────────────────────────── -->
+  <button id="hamburger" aria-label="Toggle navigation">☰</button>
+
+  <!-- ── Sidebar ─────────────────────────────────────────────────────────── -->
+  <aside id="sidebar" role="navigation" aria-label="Main navigation">
+
+    <div class="sidebar-brand">
+      <div class="brand-logo">🛡️</div>
+      <div class="brand-title">CyberShield</div>
+      <div class="brand-sub">Cybersecurity Incident Response Expert System</div>
+    </div>
+
+    <ul class="sidebar-nav" role="list">
+      <li>
+        <span class="nav-section-label">Navigation</span>
+      </li>
+      <li>
+        <a class="nav-link" href="#" data-section="home" role="menuitem">
+          <span class="nav-icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" data-section="assessment" role="menuitem">
+          <span class="nav-icon">🔎</span>
+          <span>Incident Assessment</span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" href="#" data-section="history" role="menuitem">
+          <span class="nav-icon">📋</span>
+          <span>Incident History</span>
+        </a>
+      </li>
+      <li>
+        <span class="nav-section-label">Info</span>
+      </li>
+      <li>
+        <a class="nav-link" href="#" data-section="about" role="menuitem">
+          <span class="nav-icon">ℹ️</span>
+          <span>About Project</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div>⚠️ Educational Use Only</div>
+      <div style="margin-top:4px;">v1.0 &mdash; Cybersecurity Expert System</div>
+    </div>
+
+  </aside>
+
+  <!-- ── Main Content ─────────────────────────────────────────────────────── -->
+  <main id="main-content">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <div class="topbar-title">🛡️ CyberShield &mdash; Cybersecurity Incident Response Expert System</div>
+      <div class="topbar-time" id="topbar-clock"></div>
+    </header>
+
+    <div class="content-area">
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 1: HOME / DASHBOARD
+      ════════════════════════════════════════════════════════════════ -->
+      <section id="section-home" class="section" aria-label="Dashboard">
+
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+          <div class="hero-badge">
+            <span>🛡️</span>
+            <span>Knowledge-Based Expert System</span>
+          </div>
+          <h1 class="hero-title">
+            Cybersecurity<br/>
+            <span>Incident Response</span><br/>
+            Expert System
+          </h1>
+          <p class="hero-desc">
+            An intelligent, rule-based expert system that guides users through cybersecurity
+            incident identification and response. Select your incident type, answer targeted
+            diagnostic questions, and receive evidence-based remediation steps derived from a
+            curated knowledge base of IF-THEN rules.
+          </p>
+          <button class="btn-primary" id="btn-start-assessment">
+            <span>🔎</span>
+            <span>Start Incident Assessment</span>
+          </button>
+        </div>
+
+        <!-- Stat Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">⚠️</div>
+            <div class="stat-value">5</div>
+            <div class="stat-label">Incident Types</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📐</div>
+            <div class="stat-value">25+</div>
+            <div class="stat-label">Rules Defined</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🚨</div>
+            <div class="stat-value">4</div>
+            <div class="stat-label">Severity Levels</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📋</div>
+            <div class="stat-value">50+</div>
+            <div class="stat-label">Response Steps</div>
+          </div>
+        </div>
+
+        <!-- Quick Guide -->
+        <div class="about-card" style="margin-bottom:0;">
+          <h3>⚡ How It Works</h3>
+          <p>
+            <strong style="color:#fff;">1. Select Incident Type</strong> &mdash;
+            Choose from Phishing, Malware, Ransomware, Suspicious Login, or Data Breach.
+          </p>
+          <p style="margin-top:10px;">
+            <strong style="color:#fff;">2. Answer Diagnostic Questions</strong> &mdash;
+            The system presents targeted yes/no questions based on the selected incident type.
+          </p>
+          <p style="margin-top:10px;">
+            <strong style="color:#fff;">3. Receive Expert Guidance</strong> &mdash;
+            The rule engine evaluates your answers against the knowledge base and returns matched
+            IF-THEN rules, a severity classification, and a numbered remediation plan.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 2: INCIDENT ASSESSMENT
+      ════════════════════════════════════════════════════════════════ -->
+      <section id="section-assessment" class="section" aria-label="Incident Assessment">
+
+        <div class="section-header">
+          <h1>🔎 Incident Assessment</h1>
+          <p>Follow the three-step wizard to identify and evaluate your cybersecurity incident.</p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-steps">
+            <div class="progress-step" id="prog-step-1">
+              <div class="step-circle">1</div>
+              <span style="font-size:0.8rem;color:var(--text-muted);margin-left:6px;">Incident Type</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" id="prog-step-2">
+              <div class="step-circle">2</div>
+              <span style="font-size:0.8rem;color:var(--text-muted);margin-left:6px;">Diagnostics</span>
+            </div>
+            <div class="progress-line"></div>
+            <div class="progress-step" id="prog-step-3">
+              <div class="step-circle">3</div>
+              <span style="font-size:0.8rem;color:var(--text-muted);margin-left:6px;">Results</span>
+            </div>
+          </div>
+          <div class="progress-track" style="margin-top:12px;">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+        </div>
+
+        <!-- STEP 1: Select Incident Type -->
+        <div class="assessment-step" id="step-1">
+          <h2 style="font-size:1.05rem;margin-bottom:18px;color:#fff;">Step 1 &mdash; Select the Incident Type</h2>
+          <div class="type-cards-grid" id="type-cards"></div>
+          <div class="wizard-actions">
+            <button class="btn-primary" id="btn-next-step1">
+              Next &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Diagnostic Questions -->
+        <div class="assessment-step" id="step-2">
+          <div id="questions-header" class="questions-header"></div>
+          <div id="questions-container"></div>
+          <div class="wizard-actions">
+            <button class="btn-secondary" id="btn-back-step2">&larr; Back</button>
+            <button class="btn-primary" id="btn-next-step2">Analyse &rarr;</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Results -->
+        <div class="assessment-step" id="step-3">
+          <div id="results-container"></div>
+          <button class="btn-restart" id="btn-restart">
+            🔄 Start New Assessment
+          </button>
+        </div>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 3: INCIDENT HISTORY
+      ════════════════════════════════════════════════════════════════ -->
+      <section id="section-history" class="section" aria-label="Incident History">
+
+        <div class="section-header">
+          <h1>📋 Incident History</h1>
+          <p>Review past incidents, statuses, and response actions taken.</p>
+        </div>
+
+        <div class="history-toolbar">
+          <div class="filter-group">
+            <label for="history-filter">🔽 Filter by Type:</label>
+            <select id="history-filter" class="filter-select">
+              <option value="">All Incidents</option>
+              <option value="Phishing">Phishing</option>
+              <option value="Ransomware">Ransomware</option>
+              <option value="Malware Infection">Malware Infection</option>
+              <option value="Suspicious Login">Suspicious Login</option>
+              <option value="Data Breach">Data Breach</option>
+            </select>
+          </div>
+          <div style="font-size:0.8rem;color:var(--text-dim);">
+            Showing sample records — educational purposes only
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="history-table" aria-label="Incident history table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Severity</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody">
+              <!-- Populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════
+           SECTION 4: ABOUT PROJECT
+      ════════════════════════════════════════════════════════════════ -->
+      <section id="section-about" class="section" aria-label="About Project">
+
+        <div class="section-header">
+          <h1>ℹ️ About the Project</h1>
+          <p>Learn about the AI concepts and architecture behind this expert system.</p>
+        </div>
+
+        <!-- Two-column: KBA + RBR -->
+        <div class="about-grid">
+
+          <div class="about-card">
+            <h3>🤖 What is a Knowledge-Based Agent?</h3>
+            <p>
+              A <strong style="color:#fff;">Knowledge-Based Agent (KBA)</strong> is an artificial intelligence
+              system that uses a structured <em>knowledge base</em> to make decisions and solve problems.
+              Unlike simple reactive systems, a KBA stores facts, rules, and relationships about its domain
+              and applies logical reasoning to derive new conclusions.
+            </p>
+            <p>
+              In this system, the knowledge base contains cybersecurity facts (incident types, symptoms,
+              severity levels) and the inference engine (rule engine) applies forward-chaining logic to
+              match user-reported symptoms against stored IF-THEN rules to produce actionable guidance.
+            </p>
+            <p>
+              KBAs are widely used in medical diagnosis, financial risk assessment, legal advisory tools,
+              and cybersecurity incident response — wherever structured expert knowledge can be encoded
+              into machine-readable rules.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>📐 What is Rule-Based Reasoning?</h3>
+            <p>
+              <strong style="color:#fff;">Rule-Based Reasoning (RBR)</strong> is a form of artificial
+              intelligence where knowledge is represented as a set of condition-action pairs, commonly
+              written as <code>IF &lt;conditions&gt; THEN &lt;conclusion/action&gt;</code>.
+            </p>
+            <p>
+              The reasoning engine evaluates user inputs against every rule's conditions. When all
+              conditions of a rule are satisfied, that rule <em>fires</em> and contributes to the
+              system's output — in this case, a severity classification and remediation steps.
+            </p>
+            <p>Example rules from this system's knowledge base:</p>
+            <div class="ifthen-block">
+<span class="kw-if">IF</span>  unexpected_credential_email <span class="kw-val">= TRUE</span>
+<span class="kw-and">AND</span> link_clicked              <span class="kw-val">= TRUE</span>
+<span class="kw-and">AND</span> redirected_to_fake_page   <span class="kw-val">= TRUE</span>
+<span class="kw-then">THEN</span> severity <span class="kw-val">= "Critical"</span>
+     label    <span class="kw-val">= "High-Confidence Phishing Attack"</span>
+
+<span class="kw-if">IF</span>  ransom_note_displayed  <span class="kw-val">= TRUE</span>
+<span class="kw-and">AND</span> files_inaccessible    <span class="kw-val">= TRUE</span>
+<span class="kw-and">AND</span> unusual_extensions    <span class="kw-val">= TRUE</span>
+<span class="kw-then">THEN</span> severity <span class="kw-val">= "Critical"</span>
+     label    <span class="kw-val">= "Confirmed Ransomware Attack"</span>
+
+<span class="kw-if">IF</span>  unauthorized_data_access <span class="kw-val">= TRUE</span>
+<span class="kw-and">AND</span> unusual_outbound_traffic <span class="kw-val">= TRUE</span>
+<span class="kw-then">THEN</span> severity <span class="kw-val">= "Critical"</span>
+     label    <span class="kw-val">= "Active Data Exfiltration Detected"</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Architecture Diagram -->
+        <div class="arch-diagram">
+<h3>🏗️ System Architecture — CyberShield Expert System</h3>
+┌─────────────────────────────────────────────────────────────────┐
+│                        USER INTERFACE (HTML/CSS)                 │
+│  ┌─────────────┐  ┌────────────────────┐  ┌──────────────────┐ │
+│  │  Dashboard  │  │ Assessment Wizard  │  │ Incident History │ │
+│  │  (Home)     │  │ Step 1→2→3         │  │ Table + Modal   │ │
+│  └─────────────┘  └────────────────────┘  └──────────────────┘ │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │  User Input (incident type + answers)
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                     APP.JS — UI CONTROLLER                       │
+│  Navigation │ Form Validation │ Dynamic Rendering │ Modal Logic  │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │  evaluate(type, answers)
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   ENGINE.JS — RULE ENGINE                        │
+│                                                                  │
+│  ┌──────────────────────┐    ┌───────────────────────────────┐  │
+│  │   KNOWLEDGE BASE     │    │      INFERENCE ENGINE         │  │
+│  │                      │    │                               │  │
+│  │  QUESTIONS{}         │    │  For each rule in RULES[type]:│  │
+│  │  - phishing (5 Qs)   │───▶│    Check all conditions       │  │
+│  │  - malware  (5 Qs)   │    │    against user answers       │  │
+│  │  - ransomware(5 Qs)  │    │    If ALL match → fire rule   │  │
+│  │  - suspLogin(5 Qs)   │    │                               │  │
+│  │  - dataBreach(5 Qs)  │    │  Return: matched rules,       │  │
+│  │                      │    │          highest severity,    │  │
+│  │  RULES{}             │    │          merged response steps│  │
+│  │  - 15 rules total    │    └───────────────────────────────┘  │
+│  │  - 3 per type        │                                        │
+│  └──────────────────────┘                                        │
+└───────────────────────────────┬─────────────────────────────────┘
+                                │  Result { matchedRules, severity, label, steps }
+                                ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                      RESULTS DISPLAY                             │
+│  Severity Badge │ Matched IF-THEN Rules │ Numbered Response Plan │
+└─────────────────────────────────────────────────────────────────┘
+
+  Severity Scale:  🔴 Critical  🟠 High  🔵 Medium  🟢 Low
+        </div>
+
+        <!-- Team / Project Info -->
+        <div class="team-card">
+          <h3>👥 Project Information</h3>
+          <div class="team-info">
+            <div class="team-row">
+              <span class="team-label">Project Title:</span>
+              <span class="team-val">CyberShield — Cybersecurity Incident Response Expert System</span>
+            </div>
+            <div class="team-row">
+              <span class="team-label">Course:</span>
+              <span class="team-val">Artificial Intelligence / Knowledge-Based Systems</span>
+            </div>
+            <div class="team-row">
+              <span class="team-label">Technology:</span>
+              <span class="team-val">Pure HTML5, CSS3, Vanilla JavaScript (No frameworks)</span>
+            </div>
+            <div class="team-row">
+              <span class="team-label">AI Technique:</span>
+              <span class="team-val">Rule-Based Reasoning with Forward Chaining</span>
+            </div>
+            <div class="team-row">
+              <span class="team-label">Knowledge Base:</span>
+              <span class="team-val">25+ IF-THEN rules across 5 cybersecurity incident domains</span>
+            </div>
+            <div class="team-row">
+              <span class="team-label">Version:</span>
+              <span class="team-val">1.0 — Rule-Based Reasoning Engine</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </div><!-- /content-area -->
+
+    <!-- Disclaimer Footer -->
+    <footer class="disclaimer-footer" role="contentinfo">
+      <strong>⚠️ Disclaimer:</strong>
+      This system uses predefined sample rules for educational purposes only.
+      It cannot detect real attacks automatically. For actual cybersecurity incidents,
+      consult qualified information security professionals and your organization's incident response team.
+    </footer>
+
+  </main><!-- /main-content -->
+
+  <!-- ── Incident Detail Modal ────────────────────────────────────────────── -->
+  <div id="incident-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
+    <div class="modal-box">
+      <div class="modal-title-bar">
+        <h3 id="modal-heading">📄 Incident Details</h3>
+        <button class="btn-modal-close" id="modal-close" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="modal-content-inner">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Scripts ──────────────────────────────────────────────────────────── -->
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Live clock in topbar
+    (function () {
+      function tick() {
+        const el = document.getElementById('topbar-clock');
+        if (el) {
+          el.textContent = new Date().toLocaleString('en-IN', {
+            weekday: 'short', year: 'numeric', month: 'short',
+            day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit'
+          });
+        }
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Update progress-step circles to use DOM IDs correctly
+    document.addEventListener('DOMContentLoaded', function () {
+      // Remap progress step IDs to match app.js expectations
+      var steps = document.querySelectorAll('.progress-step');
+      steps.forEach(function(s, i) {
+        s.id = 'prog-step-' + (i + 1);
+      });
+    });
+  </script>
+
+</body>
+</html>
