@@ -1422,3 +1422,156 @@ body.modal-open {
     flex-direction: column;
   }
 }
+/* ==========================================================
+   STREAMLIT OVERRIDES — CYBERSHIELD
+   Append this section to the bottom of style.css
+   ========================================================== */
+
+:root {
+    color-scheme: dark;
+}
+
+.stApp,
+[data-testid="stAppViewContainer"] {
+    background:
+        radial-gradient(
+            ellipse at 80% 10%,
+            rgba(0, 102, 204, 0.20),
+            transparent 45%
+        ),
+        #0a0e1a !important;
+    color: #e8f4ff !important;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(10, 14, 26, 0.95) !important;
+}
+
+[data-testid="stMain"] .block-container {
+    max-width: 1400px;
+    padding: 2.5rem 2rem 3rem;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background: #0d1b2e !important;
+    border-right: 1px solid #1e3a5f;
+}
+
+[data-testid="stSidebar"] * {
+    color: #c7d9ef;
+}
+
+[data-testid="stSidebar"] input {
+    accent-color: #00d4ff;
+}
+
+/* Headings and body text */
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #e8f4ff !important;
+    font-weight: 750;
+}
+
+.stApp p,
+.stApp label {
+    color: #b9cbe0;
+}
+
+/* Metric cards */
+[data-testid="stMetric"] {
+    background: linear-gradient(
+        145deg,
+        #112b49,
+        #0f1f3d
+    ) !important;
+    border: 1px solid #1e3a5f;
+    border-radius: 12px;
+    padding: 20px !important;
+    min-height: 125px;
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    border-color: #00d4ff;
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: #8899bb !important;
+}
+
+[data-testid="stMetricValue"] {
+    color: #00d4ff !important;
+    font-weight: 800;
+}
+
+/* Text inputs and text areas */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: #0a1628 !important;
+    color: #e8f4ff !important;
+    border: 1px solid #1e3a5f !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stTextInput"] input:focus,
+[data-testid="stTextArea"] textarea:focus {
+    border-color: #00d4ff !important;
+    box-shadow: 0 0 0 1px #00d4ff;
+}
+
+/* Select boxes */
+[data-testid="stSelectbox"] [data-baseweb="select"] > div {
+    background: #0a1628 !important;
+    border-color: #1e3a5f !important;
+    color: #e8f4ff !important;
+}
+
+/* Buttons */
+.stApp .stButton > button,
+.stApp [data-testid="stFormSubmitButton"] > button {
+    background: linear-gradient(
+        110deg,
+        #00d4ff,
+        #0066cc
+    ) !important;
+    color: #07111f !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-weight: 750 !important;
+    padding: 0.6rem 1.2rem;
+    transition: filter 0.2s ease;
+}
+
+.stApp .stButton > button:hover,
+.stApp [data-testid="stFormSubmitButton"] > button:hover {
+    filter: brightness(1.15);
+}
+
+/* Information and warning messages */
+[data-testid="stAlert"] {
+    border-radius: 10px;
+}
+
+/* Dataframe and tables */
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    border: 1px solid #1e3a5f;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    [data-testid="stMain"] .block-container {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 14px !important;
+        min-height: auto;
+    }
+}
