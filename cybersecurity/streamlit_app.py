@@ -29,12 +29,71 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 if page == "Dashboard":
-    st.header("Security Dashboard")
+    st.markdown(
+        """
+        <div style="
+            background: linear-gradient(
+                120deg, #0d1b2e, #0a2040, #102b49
+            );
+            border: 1px solid #1e3a5f;
+            border-radius: 14px;
+            padding: 36px;
+            margin-bottom: 24px;
+        ">
+            <div style="
+                color: #00d4ff;
+                font-size: 12px;
+                letter-spacing: 2px;
+                font-weight: 700;
+                margin-bottom: 18px;
+            ">
+                🛡️ KNOWLEDGE-BASED EXPERT SYSTEM
+            </div>
+            <h1 style="
+                color: #ffffff;
+                font-size: 34px;
+                margin: 0 0 12px 0;
+            ">
+                CyberShield
+            </h1>
+            <h2 style="
+                color: #00d4ff;
+                font-size: 24px;
+                margin: 0 0 14px 0;
+            ">
+                Cybersecurity Incident Response
+            </h2>
+            <p style="
+                color: #b9cbe0;
+                line-height: 1.7;
+                max-width: 720px;
+                margin-bottom: 0;
+            ">
+                An intelligent, rule-based expert system that guides
+                users through cybersecurity incident identification
+                and response with evidence-based recommendations.
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.subheader("Security Dashboard")
+
     c1, c2, c3 = st.columns(3)
-    c1.metric("Incident Types", "6")
-    c2.metric("Response Rules", "25+")
-    c3.metric("Severity Levels", "4")
-    st.info("Choose Incident Assessment from the sidebar to begin.")
+
+    with c1:
+        st.metric("Incident Types", "6")
+
+    with c2:
+        st.metric("Response Rules", "25+")
+
+    with c3:
+        st.metric("Severity Levels", "4")
+
+    st.info(
+        "Choose Incident Assessment from the sidebar to begin."
+    )
 
 elif page == "Incident Assessment":
     st.header("Incident Assessment")
